@@ -1,0 +1,659 @@
+:root {
+    --primary: #2563eb;
+    --primary-dark: #1d4ed8;
+    --accent: #f59e0b;
+    --dark: #1f2937;
+    --light: #f9fafb;
+    --gray: #6b7280;
+    --border: #e5e7eb;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+
+body {
+    background-color: var(--light);
+    color: var(--dark);
+    line-height: 1.6;
+}
+
+/* Navbar & Logo */
+header {
+    background: #ffffff;
+    border-bottom: 1px solid var(--border);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.nav-container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0.75rem 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo-brand {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    text-decoration: none;
+    color: var(--dark);
+    font-size: 1.15rem;
+    font-weight: 700;
+}
+
+.nav-logo {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid var(--accent);
+}
+
+.nav-links {
+    display: flex;
+    gap: 1.5rem;
+    list-style: none;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--gray);
+    font-weight: 500;
+    font-size: 0.95rem;
+    transition: color 0.2s;
+}
+
+.nav-links a:hover {
+    color: var(--primary);
+}
+
+/* Hero Section */
+.hero {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 3rem 1.5rem 1rem 1.5rem;
+    text-align: center;
+}
+
+.hero h1 {
+    font-size: 2.25rem;
+    font-weight: 700;
+    margin-bottom: 0.75rem;
+    color: var(--dark);
+}
+
+.hero p {
+    font-size: 1.05rem;
+    color: var(--gray);
+    max-width: 600px;
+    margin: 0 auto 2rem auto;
+}
+
+/* Perbesar container dan gambar brosur agar pas sesuai layout */
+.hero-banner-container {
+    max-width: 100%; /* Memaksimalkan lebar mengikuti layout utama */
+    width: 100%;
+    margin: 0 auto;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 15px 35px -5px rgba(0, 0, 0, 0.15);
+    border: 3px solid #ffffff;
+    background-color: #ffffff;
+}
+
+.hero-banner-img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+}
+
+/* Featured Products Grid */
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 2rem 1.5rem;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 1.75rem;
+    font-weight: 700;
+    margin-bottom: 2.5rem;
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-bottom: 4rem;
+}
+
+.card {
+    background: #ffffff;
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    overflow: hidden;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05);
+}
+
+.card-header {
+    background: var(--primary);
+    color: white;
+    padding: 1.5rem;
+    text-align: center;
+}
+
+.nota-header {
+    background-color: var(--dark) !important;
+}
+
+.card-header h3 {
+    font-size: 1.25rem;
+    font-weight: 600;
+}
+
+.card-body {
+    padding: 1.5rem;
+}
+
+.card-body ul {
+    list-style: none;
+    margin-bottom: 1.5rem;
+}
+
+.card-body ul li {
+    padding: 0.5rem 0;
+    border-bottom: 1px solid var(--border);
+    font-size: 0.9rem;
+    color: var(--gray);
+}
+
+.card-body ul li strong {
+    color: var(--dark);
+}
+
+.price {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--primary);
+    margin-bottom: 1.5rem;
+}
+
+.btn {
+    display: block;
+    width: 100%;
+    background: #22c55e;
+    color: white;
+    text-align: center;
+    padding: 0.75rem;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: background 0.2s;
+}
+
+.btn:hover {
+    background: #16a34a;
+}
+
+/* Keunggulan dengan Format Kotak-Kotak */
+.features {
+    background: #f3f4f6; /* Background luar abu-abu terang */
+    padding: 3rem 1.5rem;
+    margin-bottom: 3rem;
+    border-top: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
+}
+
+.features-grid {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+}
+
+.feature-item {
+    background: var(--primary); /* Kotak berlatar belakang biru */
+    color: white;
+    padding: 2rem 1.5rem;
+    border-radius: 12px;
+    text-align: left; /* Bisa diubah ke 'center' jika ingin di tengah */
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.feature-item:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.15);
+}
+
+.feature-item h4 {
+    color: white;
+    font-size: 1.15rem;
+    margin-bottom: 0.75rem;
+    font-weight: 600;
+}
+
+.feature-item p {
+    color: #e0e7ff; /* Teks putih kebiruan agar nyaman dibaca */
+    font-size: 0.9rem;
+    line-height: 1.5;
+}
+
+/* Footer Modern Styling */
+.footer-section {
+    background: var(--dark);
+    color: white;
+    padding: 3rem 1.5rem 1rem 1.5rem;
+    font-size: 0.9rem;
+}
+
+.footer-container {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    padding-bottom: 2rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.footer-col h3 {
+    font-size: 1.2rem;
+    margin-bottom: 0.75rem;
+    color: white;
+}
+
+.footer-col h4 {
+    font-size: 1.05rem;
+    margin-bottom: 0.75rem;
+    color: white;
+}
+
+.footer-col p {
+    color: #9ca3af;
+    margin-bottom: 0.5rem;
+    line-height: 1.5;
+}
+
+.footer-address {
+    margin-top: 1rem;
+    font-size: 0.85rem;
+}
+
+.footer-links {
+    list-style: none;
+}
+
+.footer-links li {
+    margin-bottom: 0.5rem;
+}
+
+.footer-links a {
+    color: #9ca3af;
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+.footer-links a:hover {
+    color: white;
+}
+
+.footer-wa-btn {
+    display: inline-block;
+    background: #22c55e;
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.85rem;
+    margin-top: 0.5rem;
+    transition: background 0.2s;
+}
+
+.footer-wa-btn:hover {
+    background: #16a34a;
+}
+
+.footer-bottom {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding-top: 1.5rem;
+    text-align: center;
+    color: #9ca3af;
+    font-size: 0.85rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 1.8rem;
+    }
+    .nav-links {
+        display: none;
+    }
+}
+
+/* Product Grid Small (Untuk Produk Lainnya) */
+.product-grid-small {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 4rem;
+}
+
+.mini-card {
+    background: #ffffff;
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 1.25rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.mini-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px -4px rgba(0, 0, 0, 0.05);
+    border-color: var(--primary);
+}
+
+.mini-card h4 {
+    font-size: 1.05rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    color: var(--dark);
+}
+
+.mini-card p {
+    font-size: 0.85rem;
+    color: var(--gray);
+    margin-bottom: 1rem;
+    flex-grow: 1;
+}
+
+.btn-sm {
+    display: block;
+    width: 100%;
+    background: #22c55e;
+    color: white;
+    text-align: center;
+    padding: 0.5rem;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.9rem;
+    transition: background 0.2s;
+}
+
+.btn-sm:hover {
+    background: #16a34a;
+}
+
+
+/* Halaman Kontak Styling */
+.contact-header {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 3rem 1.5rem 1rem 1.5rem;
+    text-align: center;
+}
+
+.contact-header h1 {
+    font-size: 2.25rem;
+    font-weight: 700;
+    margin-bottom: 0.75rem;
+    color: var(--dark);
+}
+
+.contact-header p {
+    font-size: 1.05rem;
+    color: var(--gray);
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.contact-container {
+    max-width: 1100px;
+    margin: 0 auto 4rem auto;
+    padding: 0 1.5rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.contact-info-card, .contact-map-card {
+    background: #ffffff;
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 2rem;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+}
+
+.contact-info-card h3, .contact-map-card h3 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 1.25rem;
+    color: var(--dark);
+    border-bottom: 2px solid var(--border);
+    padding-bottom: 0.75rem;
+}
+
+.contact-list {
+    list-style: none;
+    margin-bottom: 1.5rem;
+}
+
+.contact-list li {
+    margin-bottom: 1rem;
+    color: var(--gray);
+    font-size: 0.95krem;
+    line-height: 1.5;
+}
+
+.contact-list li strong {
+    color: var(--dark);
+}
+
+.map-responsive {
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px;
+    border: 1px solid var(--border);
+}
+
+/* Floating WhatsApp Button Styling */
+.floating-wa {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background: #25d366;
+    color: white;
+    padding: 12px 20px;
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-weight: 600;
+    font-size: 0.95rem;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    z-index: 999;
+    text-decoration: none;
+    transition: transform 0.2s ease, background 0.2s ease, box-shadow 0.2s ease;
+}
+
+.floating-wa svg {
+    width: 22px;
+    height: 22px;
+    fill: white;
+}
+
+.floating-wa:hover {
+    transform: scale(1.05);
+    background: #22bf5b;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
+}
+
+/* Penyesuaian untuk layar HP kecil agar tidak terlalu memakan tempat */
+@media (max-width: 480px) {
+    .floating-wa {
+        bottom: 20px;
+        right: 20px;
+        padding: 10px 16px;
+        font-size: 0.85rem;
+    }
+}
+
+/* Mengaktifkan pengguliran halus saat mengklik menu navigasi */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Pengaturan Awal untuk Animasi Fade In */
+.fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+/* Saat elemen masuk ke layar (diaktifkan oleh JavaScript) */
+.fade-in.appear {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Styling Grid Portofolio Modern */
+.portfolio-grid-masonry {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.portfolio-card {
+    background: #ffffff;
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.04);
+}
+
+.portfolio-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08);
+}
+
+.portfolio-card img {
+    width: 100%;
+    height: 250px; /* Tinggi sedikit disesuaikan agar pas tanpa teks */
+    object-fit: cover;
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+.portfolio-card:hover img {
+    transform: scale(1.03);
+}
+
+/* Kelas untuk menyembunyikan item sebelum tombol Load More diklik */
+.hidden-item {
+    display: none;
+}
+
+/* Kelas untuk menyembunyikan item sebelum tombol Load More diklik */
+.hidden-item {
+    display: none;
+}
+
+/* Tombol Load More */
+.load-more-container {
+    text-align: center;
+    margin-top: 2rem;
+}
+
+.btn-load-more {
+    background: var(--primary);
+    color: white;
+    border: none;
+    padding: 0.75rem 2rem;
+    font-size: 0.95rem;
+    font-weight: 600;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.2s, transform 0.2s;
+}
+
+.btn-load-more:hover {
+    background: var(--primary-dark);
+    transform: translateY(-2px);
+}
+
+/* Styling Lightbox (Pop-up Zoom) agar pas di tengah layar */
+.lightbox {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    
+    /* Menggunakan Flexbox untuk memposisikan konten tepat di tengah */
+    display: none; /* Default tetap disembunyikan, nanti diubah via JS menjadi 'flex' */
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 20px;
+}
+
+.lightbox-content {
+    max-width: 90%;
+    max-height: 80vh;
+    border-radius: 8px;
+    object-fit: contain;
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.5);
+}
+
+.lightbox-caption {
+    margin-top: 15px;
+    text-align: center;
+    color: #ffffff;
+    font-size: 1.1rem;
+    font-weight: 500;
+}
+
+.lightbox-close {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    color: #f1f1f1;
+    font-size: 45px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: color 0.2s;
+    z-index: 1001;
+}
+
+.lightbox-close:hover {
+    color: var(--accent);
+}
