@@ -607,19 +607,16 @@ html {
     transform: translateY(-2px);
 }
 
-/* Styling Lightbox (Pop-up Zoom) agar pas di tengah layar */
+/* Styling Lightbox (Pop-up Zoom) */
 .lightbox {
-    display: none;
+    display: none; /* Awalnya disembunyikan */
     position: fixed;
-    z-index: 1000;
+    z-index: 9999;
     left: 0;
     top: 0;
     width: 100%;
     height: 100%;
     background-color: rgba(0, 0, 0, 0.9);
-    
-    /* Menggunakan Flexbox untuk memposisikan konten tepat di tengah */
-    display: none; /* Default tetap disembunyikan, nanti diubah via JS menjadi 'flex' */
     justify-content: center;
     align-items: center;
     flex-direction: column;
@@ -634,26 +631,18 @@ html {
     box-shadow: 0 5px 25px rgba(0, 0, 0, 0.5);
 }
 
-.lightbox-caption {
-    margin-top: 15px;
-    text-align: center;
-    color: #ffffff;
-    font-size: 1.1rem;
-    font-weight: 500;
-}
-
 .lightbox-close {
     position: absolute;
-    top: 20px;
-    right: 30px;
+    top: 25px;
+    right: 35px;
     color: #f1f1f1;
     font-size: 45px;
     font-weight: bold;
     cursor: pointer;
     transition: color 0.2s;
-    z-index: 1001;
+    z-index: 10000;
 }
 
 .lightbox-close:hover {
-    color: var(--accent);
+    color: #f59e0b;
 }

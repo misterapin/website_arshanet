@@ -37,41 +37,42 @@ document.addEventListener("DOMContentLoaded", function() {
     });
 });
 
-// Fungsi Lightbox (Zoom Foto)
+// Fungsi Lightbox Global (Harus di luar DOMContentLoaded agar bisa dipanggil onclick)
 function openLightbox(imgSrc, captionText) {
     const modal = document.getElementById("lightboxModal");
     const modalImg = document.getElementById("lightboxImg");
-    const captionTextElem = document.getElementById("lightboxCaption");
 
-    if (modal && modalImg && captionTextElem) {
-        modal.style.display = "flex"; // Menggunakan flex agar otomatis berada di tengah
+    if (modal && modalImg) {
+        modal.style.display = "flex"; // Memunculkan modal dengan flexbox
         modalImg.src = imgSrc;
-        captionTextElem.textContent = captionText || "";
     }
 }
 
 function closeLightbox() {
     const modal = document.getElementById("lightboxModal");
     if (modal) {
-        modal.style.display = "none";
+        modal.style.display = "none"; // Menyembunyikan modal
     }
 }
 
-// Fungsi Tombol "Load More" (Tampilkan Foto Lainnya)
+// Logika lainnya di dalam DOMContentLoaded
 document.addEventListener("DOMContentLoaded", function() {
+    // 1. Tahun footer otomatis
+    const yearSpan = document.getElementById("year");
+    if (yearSpan) {
+        yearSpan.textContent = new Date().getFullYear();
+    }
+
+    // 2. Tombol Load More Galeri
     const loadMoreBtn = document.getElementById("loadMoreBtn");
     const loadMoreContainer = document.getElementById("loadMoreContainer");
 
     if (loadMoreBtn) {
         loadMoreBtn.addEventListener("click", function() {
             const hiddenItems = document.querySelectorAll(".portfolio-card.hidden-item");
-            
-            // Tampilkan semua item yang tersembunyi
             hiddenItems.forEach(item => {
                 item.classList.remove("hidden-item");
             });
-
-            // Sembunyikan tombol setelah semua foto dimuat
             if (loadMoreContainer) {
                 loadMoreContainer.style.display = "none";
             }
