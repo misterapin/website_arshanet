@@ -1,320 +1,344 @@
 <!DOCTYPE html>
-<html lang="id">
+<html lang="id" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ArshaNet Printing - Cetak Banner, Nota, Stiker & Kebutuhan Printing Lainnya</title>
-    
-    <!-- Menambahkan Favicon di Tab Browser -->
-    <link rel="icon" type="image/jpeg" href="images/favicon.jpg">
-
-    <!-- Google Fonts: Inter -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <!-- Menghubungkan file CSS -->
-    <link rel="stylesheet" href="css/style.css">
+    <title>ArshaNet Printing - Solusi Cetak Kilat & Berkualitas</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#1e3a8a',
+                        whatsapp: '#10b981',
+                    }
+                }
+            }
+        }
+    </script>
 </head>
-<body>
+<body class="bg-slate-50 text-slate-800 font-sans antialiased selection:bg-emerald-100 selection:text-emerald-800">
 
-    <!-- Header / Navbar -->
-    <header>
-        <div class="nav-container">
-            <a href="#" class="logo-brand">
-                <img src="images/logo.jpg" alt="Logo ArshaNet Printing" class="nav-logo">
+    <!-- NAVBAR -->
+    <nav class="bg-white/90 backdrop-blur-md shadow-sm fixed w-full z-50 top-0 border-b border-slate-100">
+        <div class="max-w-6xl mx-auto px-4 py-3 flex justify-between items-center">
+            <a href="#" class="text-xl font-extrabold text-slate-900 tracking-tight flex items-center gap-2">
                 <span>ArshaNet Printing</span>
             </a>
-            <ul class="nav-links">
-                <li><a href="#">Beranda</a></li>
-                <li><a href="#produk">Produk Andalan</a></li>
-                <li><a href="#lainnya">Produk Lainnya</a></li>
-                <li><a href="#fitur">Keunggulan</a></li>
-                <li><a href="#portofolio">Portofolio</a></li>
-                <li><a href="kontak.html">Kontak</a></li>
-            </ul>
+            <div class="hidden md:flex space-x-6 text-sm font-medium text-slate-600">
+                <a href="#beranda" class="hover:text-primary transition">Beranda</a>
+                <a href="#produk-andalan" class="hover:text-primary transition">Produk Andalan</a>
+                <a href="#produk-lainnya" class="hover:text-primary transition">Produk Lainnya</a>
+                <a href="#keunggulan" class="hover:text-primary transition">Keunggulan</a>
+                <a href="#kontak" class="hover:text-primary transition">Kontak</a>
+            </div>
+            <a href="https://wa.me/6285201214267?text=Halo%20ArshaNet%20Printing,%20saya%20ingin%20memesan%20layanan%20cetak." target="_blank" rel="noopener noreferrer" class="bg-whatsapp hover:bg-emerald-600 text-white px-5 py-2 rounded-full text-sm font-bold shadow-md transition transform hover:-translate-y-0.5">
+                Pesan via WhatsApp
+            </a>
+        </div>
+    </nav>
+
+    <!-- HERO SECTION (Satu Foto Sejajar di Kanan) -->
+    <header id="beranda" class="pt-32 pb-16 px-4 max-w-6xl mx-auto flex flex-col lg:flex-row items-center gap-12">
+        <div class="flex-1 space-y-6 text-center lg:text-left">
+            <h1 class="text-4xl md:text-5xl lg:text-6xl font-black text-slate-900 leading-tight">
+                Cetak Kilat & <br> Berkualitas, <br> <span class="text-primary">Tanpa Ribet!</span>
+            </h1>
+            <p class="text-base md:text-lg text-slate-600 max-w-lg mx-auto lg:mx-0 leading-relaxed">
+                Spesialis Banner, Nota Custom, Stiker, Kaos Sablon, hingga Undangan untuk mendukung kemajuan bisnis dan acara Anda.
+            </p>
+            <div>
+                <a href="https://wa.me/6285201214267?text=Halo%20ArshaNet%20Printing,%20saya%20ingin%20memesan." target="_blank" rel="noopener noreferrer" class="inline-block bg-whatsapp hover:bg-emerald-600 text-white font-bold px-8 py-3.5 rounded-full shadow-lg hover:shadow-xl transition transform hover:-translate-y-0.5">
+                    Pesan via WhatsApp
+                </a>
+            </div>
+        </div>
+
+        <!-- Satu Foto Tunggal di Sebelah Kanan -->
+        <div class="flex-1 relative w-full max-w-md">
+            <div class="absolute -inset-2 bg-gradient-to-tr from-blue-100 to-emerald-50 rounded-3xl blur-2xl opacity-70 -z-10"></div>
+            <div class="overflow-hidden rounded-3xl shadow-xl bg-white border border-slate-100">
+                <img src="https://picsum.photos/seed/printinghero/600/450" alt="ArshaNet Printing Banner" width="600" height="450" class="w-full h-80 md:h-96 object-cover hover:scale-105 transition duration-500">
+            </div>
         </div>
     </header>
 
-    <!-- Hero Section -->
-    <section class="hero">
-        <h1>Solusi Cetak Kilat & Berkualitas</h1>
-        <p>Spesialis cetak Spanduk/Banner, Nota Custom, Stiker, Kaos Sablon, hingga Undangan untuk mendukung kemajuan bisnis dan acara Anda.</p>
-        
-        <!-- Menampilkan Gambar Brosur / Banner Promosi -->
-        <div class="hero-banner-container">
-            <img src="images/brosur.png" alt="Promo ArshaNet Printing" class="hero-banner-img" loading="lazy">
-        </div>
-    </section>
+    <!-- PRODUK ANDALAN KAMI -->
+    <section id="produk-andalan" class="py-16 bg-white border-t border-slate-100">
+        <div class="max-w-6xl mx-auto px-4">
+            <h2 class="text-2xl md:text-3xl font-black text-slate-900 mb-10 flex items-center gap-2">
+                <span>⭐</span> Produk Andalan Kami
+            </h2>
 
-    <!-- Produk Andalan -->
-    <div class="container" id="produk">
-        <h2 class="section-title">⭐ Produk Andalan Kami</h2>
-        
-        <div class="product-grid">
-            <!-- Banner / Spanduk -->
-            <div class="card">
-                <div class="card-header">
-                    <h3>Cetak Banner / Spanduk</h3>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Card 1 -->
+                <div class="bg-white border border-slate-100 rounded-3xl p-6 shadow-sm hover:shadow-xl transition duration-300 flex flex-col justify-between group">
+                    <div>
+                        <div class="overflow-hidden rounded-2xl mb-5 bg-slate-100 h-48">
+                            <img src="https://picsum.photos/seed/banner/500/350" alt="Cetak Spanduk" loading="lazy" width="400" height="250" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                        </div>
+                        <h3 class="text-xl font-bold text-slate-900 mb-3">Cetak Spanduk / Banner</h3>
+                        <ul class="text-sm text-slate-600 space-y-2 mb-6 list-disc list-inside">
+                            <li>Bahan Flexi Standard 280gsm & Korcin</li>
+                            <li>Tahan Outdoor & Indoor</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <div class="text-sm text-slate-500 mb-2 font-medium">Mulai dari Rp 30.000 /Meter</div>
+                        <a href="https://wa.me/6285201214267?text=Halo%20ArshaNet%20Printing,%20saya%20ingin%20memesan%20Banner/Spanduk." target="_blank" rel="noopener noreferrer" class="block w-full text-center bg-whatsapp hover:bg-emerald-600 text-white font-bold py-2.5 rounded-xl shadow-sm transition">
+                            Pesan via WhatsApp
+                        </a>
+                    </div>
                 </div>
-                <div class="card-body">
-                    <ul>
-                        <li><strong>Bahan:</strong> Flexi Standard (280gsm) & Korcin</li>
-                        <li><strong>Ketahanan:</strong> Awet untuk Outdoor & Indoor</li>
-                        <li><strong>Finishing:</strong> Mata ayam (lubang pojok) / selongsong</li>
-                        <li><strong>Cocok untuk:</strong> Promosi toko, baliho, event</li>
-                    </ul>
-                    <div class="price">Mulai dari Rp,30.000 /Meter</div>
-                    <a href="https://wa.me/6285201214267?text=Halo%20ArshaNet%20Printing,%20saya%20ingin%20memesan%20Banner/Spanduk." class="btn" target="_blank">Pesan Banner via WhatsApp</a>
+
+                <!-- Card 2 -->
+                <div class="bg-white border border-slate-100 rounded-3xl p-6 shadow-sm hover:shadow-xl transition duration-300 flex flex-col justify-between group">
+                    <div>
+                        <div class="overflow-hidden rounded-2xl mb-5 bg-slate-100 h-48">
+                            <img src="https://picsum.photos/seed/nota/500/350" alt="Nota Custom" loading="lazy" width="400" height="250" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                        </div>
+                        <h3 class="text-xl font-bold text-slate-900 mb-3">Nota Custom Kasir / Faktur</h3>
+                        <ul class="text-sm text-slate-600 space-y-2 mb-6 list-disc list-inside">
+                            <li>Kertas NCR (Tembusan) / HVS (1-3 Ply)</li>
+                            <li>Gratis Desain Logo/Nama Toko</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <div class="text-sm text-slate-500 mb-2 font-medium">Mulai dari Rp 175.000 /Riem</div>
+                        <a href="https://wa.me/6285201214267?text=Halo%20ArshaNet%20Printing,%20saya%20ingin%20memesan%20Nota%20Custom." target="_blank" rel="noopener noreferrer" class="block w-full text-center bg-whatsapp hover:bg-emerald-600 text-white font-bold py-2.5 rounded-xl shadow-sm transition">
+                            Pesan via WhatsApp
+                        </a>
+                    </div>
                 </div>
-            </div>
 
-            <!-- Nota Custom -->
-            <div class="card">
-                <div class="card-header nota-header">
-                    <h3>Nota Custom Kasir / Faktur</h3>
+                <!-- Card 3 -->
+                <div class="bg-white border border-slate-100 rounded-3xl p-6 shadow-sm hover:shadow-xl transition duration-300 flex flex-col justify-between group">
+                    <div>
+                        <div class="overflow-hidden rounded-2xl mb-5 bg-slate-100 h-48">
+                            <img src="https://picsum.photos/seed/kaos/500/350" alt="Kaos Sablon DTF" loading="lazy" width="400" height="250" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                        </div>
+                        <h3 class="text-xl font-bold text-slate-900 mb-3">Kaos Sablon DTF</h3>
+                        <ul class="text-sm text-slate-600 space-y-2 mb-6 list-disc list-inside">
+                            <li>Sablon digital berkualitas tinggi</li>
+                            <li>Warna tajam & awet</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <div class="text-sm text-slate-500 mb-2 font-medium">Konsultasi Ukuran & Desain</div>
+                        <a href="https://wa.me/6285201214267?text=Halo%20ArshaNet%20Printing,%20saya%20ingin%20memesan%20Kaos%20Sablon%20DTF." target="_blank" rel="noopener noreferrer" class="block w-full text-center bg-whatsapp hover:bg-emerald-600 text-white font-bold py-2.5 rounded-xl shadow-sm transition">
+                            Pesan via WhatsApp
+                        </a>
+                    </div>
                 </div>
-                <div class="card-body">
-                    <ul>
-                        <li><strong>Bahan:</strong> NCR (Tembusan tanpa karbon) / HVS</li>
-                        <li><strong>Pilihan Rangkap:</strong> 1 Ply, 2 Ply, atau 3 Ply</li>
-                        <li><strong>Ukuran:</strong> 1/4 Folio, 1/3 Folio, 1/2 Folio</li>
-                        <li><strong>Desain:</strong> Gratis desain logo/nama toko Anda</li>
-                    </ul>
-                    <div class="price">Mulai dari Rp,175.000 /Riem</div>
-                    <a href="https://wa.me/6285201214267?text=Halo%20ArshaNet%20Printing,%20saya%20ingin%20memesan%20Nota%20Custom." class="btn" target="_blank">Pesan Nota via WhatsApp</a>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- Produk Lainnya -->
-    <div class="container" id="lainnya">
-        <h2 class="section-title">📦 Pilihan Produk Cetak Lainnya</h2>
-        
-        <div class="product-grid-small">
-            <!-- Stiker Vinyl A3 -->
-            <div class="mini-card">
-                <h4>Stiker Vinyl A3</h4>
-                <p>Anti air, tahan robek, cocok untuk label produk makanan/minuman.</p>
-                <a href="https://wa.me/6285201214267?text=Halo%20ArshaNet%20Printing,%20saya%20ingin%20pesan%20Stiker%20Vinyl%20A3." class="btn-sm" target="_blank">Pesan</a>
-            </div>
-
-            <!-- Stiker Cromo A3 -->
-            <div class="mini-card">
-                <h4>Stiker Cromo A3</h4>
-                <p>Ekonomis, daya rekat kuat, cocok untuk label kemasan kering.</p>
-                <a href="https://wa.me/6285201214267?text=Halo%20ArshaNet%20Printing,%20saya%20ingin%20pesan%20Stiker%20Cromo%20A3." class="btn-sm" target="_blank">Pesan</a>
-            </div>
-
-            <!-- Stiker Meteran -->
-            <div class="mini-card">
-                <h4>Stiker Meteran</h4>
-                <p>Cetak cetak banyak lebih hemat dengan hitungan meter.</p>
-                <a href="https://wa.me/6285201214267?text=Halo%20ArshaNet%20Printing,%20saya%20ingin%20pesan%20Stiker%20Meteran." class="btn-sm" target="_blank">Pesan</a>
-            </div>
-
-            <!-- Brosur -->
-            <div class="mini-card">
-                <h4>Brosur / Flyer</h4>
-                <p>Media promosi efektif untuk memperkenalkan produk atau event.</p>
-                <a href="https://wa.me/6285201214267?text=Halo%20ArshaNet%20Printing,%20saya%20ingin%20pesan%20Brosur." class="btn-sm" target="_blank">Pesan</a>
-            </div>
-
-            <!-- ID Card -->
-            <div class="mini-card">
-                <h4>ID Card</h4>
-                <p>Kartu tanda pengenal pegawai, panitia, atau kartu member.</p>
-                <a href="https://wa.me/6285201214267?text=Halo%20ArshaNet%20Printing,%20saya%20ingin%20pesan%20ID%20Card." class="btn-sm" target="_blank">Pesan</a>
-            </div>
-
-            <!-- BPJS / NPWP Card -->
-            <div class="mini-card">
-                <h4>BPJS / NPWP Card</h4>
-                <p>Cetak kartu penting agar lebih awet berbentuk PVC seperti ATM.</p>
-                <a href="https://wa.me/6285201214267?text=Halo%20ArshaNet%20Printing,%20saya%20ingin%20pesan%20Kartu%20BPJS/NPWP." class="btn-sm" target="_blank">Pesan</a>
-            </div>
-
-            <!-- Stempel Custom -->
-            <div class="mini-card">
-                <h4>Stempel Custom</h4>
-                <p>Stempel warna otomatis (flash) atau kayu lunas/diterima.</p>
-                <a href="https://wa.me/6285201214267?text=Halo%20ArshaNet%20Printing,%20saya%20ingin%20pesan%20Stempel%20Custom." class="btn-sm" target="_blank">Pesan</a>
-            </div>
-
-            <!-- Kaos Sablon DTF -->
-            <div class="mini-card">
-                <h4>Kaos Sablon DTF</h4>
-                <p>Sablon digital berkualitas tinggi, warna tajam dan awet.</p>
-                <a href="https://wa.me/6285201214267?text=Halo%20ArshaNet%20Printing,%20saya%20ingin%20pesan%20Kaos%20Sablon%20DTF." class="btn-sm" target="_blank">Pesan</a>
-            </div>
-
-            <!-- Jersey Custom -->
-            <div class="mini-card">
-                <h4>Jersey Custom</h4>
-                <p>Jersey printing full color untuk tim bola, sepeda, atau event.</p>
-                <a href="https://wa.me/6285201214267?text=Halo%20ArshaNet%20Printing,%20saya%20ingin%20pesan%20Jersey%20Custom." class="btn-sm" target="_blank">Pesan</a>
-            </div>
-            
-            <!-- Buku Yasin -->
-            <div class="mini-card">
-                <h4>Buku Yasin</h4>
-                <p>Untuk keperluan tahlilan, haul, atau kenang-kenangan keluarga.</p>
-                <a href="https://wa.me/6285201214267?text=Halo%20ArshaNet%20Printing,%20saya%20ingin%20pesan%20Buku%20Yasin." class="btn-sm" target="_blank">Pesan</a>
-            </div>
-
-            <!-- Undangan -->
-            <div class="mini-card">
-                <h4>Undangan Digital</h4>
-                <p>Desain elegan dan kekinian untuk momen spesial Anda.</p>
-                <a href="https://wa.me/6285201214267?text=Halo%20ArshaNet%20Printing,%20saya%20ingin%20pesan%20Undangan." class="btn-sm" target="_blank">Pesan</a>
-            </div>
-
-            <!-- Cetakan Lain-Lain -->
-            <div class="mini-card" style="border: 2px dashed var(--primary);">
-                <h4>✨ Cetakan Lain-Lain</h4>
-                <p>Menerima cetak Kalender, Nota Custom tambahan, Sertifikat, Amplop, Kop Surat, dan kebutuhan cetak lainnya sesuai permintaan.</p>
-                <a href="https://wa.me/6285201214267?text=Halo%20ArshaNet%20Printing,%20saya%20ingin%20konsultasi%20cetakan%20lainnya." class="btn-sm" target="_blank">Konsultasi</a>
-            </div>
-                </div>
-    </div>
-
-    <!-- Keunggulan -->
-    <section class="features" id="fitur">
-        <div class="features-grid">
-            <div class="feature-item">
-                <h4>⚡ Proses Cepat</h4>
-                <p>Pengerjaan tepat waktu dengan mesin cetak berkualitas tinggi.</p>
-            </div>
-            <div class="feature-item">
-                <h4>🎨 Desain Custom</h4>
-                <p>Bisa menyesuaikan dengan identitas, logo, dan keinginan brand toko Anda.</p>
-            </div>
-            <div class="feature-item">
-                <h4>💬 Pesan Mudah</h4>
-                <p>Konsultasi dan pemesanan langsung cepat via WhatsApp tanpa ribet.</p>
             </div>
         </div>
     </section>
 
-<!-- Galeri Portofolio Grid & Lightbox -->
-    <div class="container" id="portofolio">
-        <h2 class="section-title">🖼️ Galeri Portofolio & Hasil Cetak</h2>
-        
-        <!-- Grid Galeri -->
-        <div class="portfolio-grid-masonry" id="portfolioGrid">
-            <!-- Item 1 -->
-            <div class="portfolio-card" onclick="openLightbox('portofolio/1.png')">
-                <img src="portofolio/1.png" alt="Banner & Spanduk" loading="lazy">
-            </div>
+    <!-- PRODUK LAINNYA (KATALOG LENGKAP) -->
+    <section id="produk-lainnya" class="py-16 bg-slate-50 border-t border-slate-100">
+        <div class="max-w-6xl mx-auto px-4">
+            <h2 class="text-2xl md:text-3xl font-black text-slate-900 mb-10 flex items-center gap-2">
+                <span>📦</span> Pilihan Produk Cetak Lainnya
+            </h2>
 
-            <!-- Item 2 -->
-            <div class="portfolio-card" onclick="openLightbox('portofolio/2.png')">
-                <img src="portofolio/2.png" alt="Nota Custom" loading="lazy">
-            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Item 1 -->
+                <div class="bg-white p-6 rounded-3xl border border-slate-200/80 shadow-sm hover:shadow-md transition flex flex-col justify-between">
+                    <div>
+                        <h3 class="text-lg font-bold text-slate-900 mb-2">Stiker Vinyl A3</h3>
+                        <p class="text-sm text-slate-600 mb-6 leading-relaxed">Anti air, tahan robek, sangat cocok untuk label produk makanan atau minuman.</p>
+                    </div>
+                    <a href="https://wa.me/6285201214267?text=Halo%20ArshaNet%20Printing,%20saya%20ingin%20pesan%20Stiker%20Vinyl%20A3." target="_blank" class="block w-full text-center bg-whatsapp hover:bg-emerald-600 text-white font-bold py-2.5 rounded-xl text-sm transition shadow-sm">
+                        Pesan Sekarang
+                    </a>
+                </div>
 
-            <!-- Item 3 -->
-            <div class="portfolio-card" onclick="openLightbox('portofolio/3.png')">
-                <img src="portofolio/3.png" alt="Kaos Sablon DTF" loading="lazy">
-            </div>
+                <!-- Item 2 -->
+                <div class="bg-white p-6 rounded-3xl border border-slate-200/80 shadow-sm hover:shadow-md transition flex flex-col justify-between">
+                    <div>
+                        <h3 class="text-lg font-bold text-slate-900 mb-2">Stiker Cromo A3</h3>
+                        <p class="text-sm text-slate-600 mb-6 leading-relaxed">Ekonomis, daya rekat kuat, cocok untuk label kemasan produk kering.</p>
+                    </div>
+                    <a href="https://wa.me/6285201214267?text=Halo%20ArshaNet%20Printing,%20saya%20ingin%20pesan%20Stiker%20Cromo%20A3." target="_blank" class="block w-full text-center bg-whatsapp hover:bg-emerald-600 text-white font-bold py-2.5 rounded-xl text-sm transition shadow-sm">
+                        Pesan Sekarang
+                    </a>
+                </div>
 
-            <!-- Item 4 (Awalnya tersembunyi) -->
-            <div class="portfolio-card hidden-item" onclick="openLightbox('portofolio/4.png')">
-                <img src="portofolio/4.png" alt="Stiker Custom" loading="lazy">
-            </div>
+                <!-- Item 3 -->
+                <div class="bg-white p-6 rounded-3xl border border-slate-200/80 shadow-sm hover:shadow-md transition flex flex-col justify-between">
+                    <div>
+                        <h3 class="text-lg font-bold text-slate-900 mb-2">Stiker Meteran</h3>
+                        <p class="text-sm text-slate-600 mb-6 leading-relaxed">Cetak cetak banyak jadi jauh lebih hemat dengan sistem hitungan meter.</p>
+                    </div>
+                    <a href="https://wa.me/6285201214267?text=Halo%20ArshaNet%20Printing,%20saya%20ingin%20pesan%20Stiker%20Meteran." target="_blank" class="block w-full text-center bg-whatsapp hover:bg-emerald-600 text-white font-bold py-2.5 rounded-xl text-sm transition shadow-sm">
+                        Pesan Sekarang
+                    </a>
+                </div>
 
-            <!-- Item 5 -->
-            <div class="portfolio-card hidden-item" onclick="openLightbox('portofolio/5.png')">
-                <img src="portofolio/5.png" alt="ID Card" loading="lazy">
-            </div>
+                <!-- Item 4 -->
+                <div class="bg-white p-6 rounded-3xl border border-slate-200/80 shadow-sm hover:shadow-md transition flex flex-col justify-between">
+                    <div>
+                        <h3 class="text-lg font-bold text-slate-900 mb-2">Brosur / Flyer</h3>
+                        <p class="text-sm text-slate-600 mb-6 leading-relaxed">Media promosi efektif untuk memperkenalkan produk baru atau event Anda.</p>
+                    </div>
+                    <a href="https://wa.me/6285201214267?text=Halo%20ArshaNet%20Printing,%20saya%20ingin%20pesan%20Brosur." target="_blank" class="block w-full text-center bg-whatsapp hover:bg-emerald-600 text-white font-bold py-2.5 rounded-xl text-sm transition shadow-sm">
+                        Pesan Sekarang
+                    </a>
+                </div>
 
-            <!-- Item 6 -->
-            <div class="portfolio-card hidden-item" onclick="openLightbox('portofolio/6.png')">
-                <img src="portofolio/6.png" alt="Stempel Custom" loading="lazy">
-            </div>
-            <div class="portfolio-card hidden-item" onclick="openLightbox('portofolio/7.png')">
-                <img src="portofolio/7.png" alt="Stempel Custom" loading="lazy">
-            </div>
-            <div class="portfolio-card hidden-item" onclick="openLightbox('portofolio/8.png')">
-                <img src="portofolio/8.png" alt="Stempel Custom" loading="lazy">
-            </div>
-            <div class="portfolio-card hidden-item" onclick="openLightbox('portofolio/9.png')">
-                <img src="portofolio/9.png" alt="Stempel Custom" loading="lazy">
-            </div>
-            <div class="portfolio-card hidden-item" onclick="openLightbox('portofolio/10.png')">
-                <img src="portofolio/10.png" alt="Stempel Custom" loading="lazy">
-            </div>
-            <div class="portfolio-card hidden-item" onclick="openLightbox('portofolio/11.png')">
-                <img src="portofolio/11.png" alt="Stempel Custom" loading="lazy">
-            </div>
-            <div class="portfolio-card hidden-item" onclick="openLightbox('portofolio/12.png')">
-                <img src="portofolio/12.png" alt="Stempel Custom" loading="lazy">
-            </div>
-            <div class="portfolio-card hidden-item" onclick="openLightbox('portofolio/13.png')">
-                <img src="portofolio/13.png" alt="Stempel Custom" loading="lazy">
-            </div>
-            <div class="portfolio-card hidden-item" onclick="openLightbox('portofolio/14.png')">
-                <img src="portofolio/14.png" alt="Stempel Custom" loading="lazy">
-            </div>
-            <div class="portfolio-card hidden-item" onclick="openLightbox('portofolio/15.png')">
-                <img src="portofolio/15.png" alt="Stempel Custom" loading="lazy">
-            </div>
+                <!-- Item 5 -->
+                <div class="bg-white p-6 rounded-3xl border border-slate-200/80 shadow-sm hover:shadow-md transition flex flex-col justify-between">
+                    <div>
+                        <h3 class="text-lg font-bold text-slate-900 mb-2">ID Card</h3>
+                        <p class="text-sm text-slate-600 mb-6 leading-relaxed">Kartu tanda pengenal pegawai, panitia acara, atau kartu member eksklusif.</p>
+                    </div>
+                    <a href="https://wa.me/6285201214267?text=Halo%20ArshaNet%20Printing,%20saya%20ingin%20pesan%20ID%20Card." target="_blank" class="block w-full text-center bg-whatsapp hover:bg-emerald-600 text-white font-bold py-2.5 rounded-xl text-sm transition shadow-sm">
+                        Pesan Sekarang
+                    </a>
+                </div>
 
+                <!-- Item 6 -->
+                <div class="bg-white p-6 rounded-3xl border border-slate-200/80 shadow-sm hover:shadow-md transition flex flex-col justify-between">
+                    <div>
+                        <h3 class="text-lg font-bold text-slate-900 mb-2">BPJS / NPWP Card</h3>
+                        <p class="text-sm text-slate-600 mb-6 leading-relaxed">Cetak kartu penting agar lebih awet berbentuk PVC seperti kartu ATM.</p>
+                    </div>
+                    <a href="https://wa.me/6285201214267?text=Halo%20ArshaNet%20Printing,%20saya%20ingin%20pesan%20Kartu%20BPJS/NPWP." target="_blank" class="block w-full text-center bg-whatsapp hover:bg-emerald-600 text-white font-bold py-2.5 rounded-xl text-sm transition shadow-sm">
+                        Pesan Sekarang
+                    </a>
+                </div>
+
+                <!-- Item 7 -->
+                <div class="bg-white p-6 rounded-3xl border border-slate-200/80 shadow-sm hover:shadow-md transition flex flex-col justify-between">
+                    <div>
+                        <h3 class="text-lg font-bold text-slate-900 mb-2">Stempel Custom</h3>
+                        <p class="text-sm text-slate-600 mb-6 leading-relaxed">Stempel warna otomatis (flash) atau kayu lunas/diterima praktis.</p>
+                    </div>
+                    <a href="https://wa.me/6285201214267?text=Halo%20ArshaNet%20Printing,%20saya%20ingin%20pesan%20Stempel%20Custom." target="_blank" class="block w-full text-center bg-whatsapp hover:bg-emerald-600 text-white font-bold py-2.5 rounded-xl text-sm transition shadow-sm">
+                        Pesan Sekarang
+                    </a>
+                </div>
+
+                <!-- Item 8 -->
+                <div class="bg-white p-6 rounded-3xl border border-slate-200/80 shadow-sm hover:shadow-md transition flex flex-col justify-between">
+                    <div>
+                        <h3 class="text-lg font-bold text-slate-900 mb-2">Jersey Custom</h3>
+                        <p class="text-sm text-slate-600 mb-6 leading-relaxed">Jersey printing full color untuk tim bola, sepeda, atau event olahraga.</p>
+                    </div>
+                    <a href="https://wa.me/6285201214267?text=Halo%20ArshaNet%20Printing,%20saya%20ingin%20pesan%20Jersey%20Custom." target="_blank" class="block w-full text-center bg-whatsapp hover:bg-emerald-600 text-white font-bold py-2.5 rounded-xl text-sm transition shadow-sm">
+                        Pesan Sekarang
+                    </a>
+                </div>
+
+                <!-- Item 9 -->
+                <div class="bg-white p-6 rounded-3xl border border-slate-200/80 shadow-sm hover:shadow-md transition flex flex-col justify-between">
+                    <div>
+                        <h3 class="text-lg font-bold text-slate-900 mb-2">Buku Yasin</h3>
+                        <p class="text-sm text-slate-600 mb-6 leading-relaxed">Untuk keperluan tahlilan, haul, atau kenang-kenangan keluarga tercinta.</p>
+                    </div>
+                    <a href="https://wa.me/6285201214267?text=Halo%20ArshaNet%20Printing,%20saya%20ingin%20pesan%20Buku%20Yasin." target="_blank" class="block w-full text-center bg-whatsapp hover:bg-emerald-600 text-white font-bold py-2.5 rounded-xl text-sm transition shadow-sm">
+                        Pesan Sekarang
+                    </a>
+                </div>
+
+                <!-- Item 10 -->
+                <div class="bg-white p-6 rounded-3xl border border-slate-200/80 shadow-sm hover:shadow-md transition flex flex-col justify-between">
+                    <div>
+                        <h3 class="text-lg font-bold text-slate-900 mb-2">Undangan Digital</h3>
+                        <p class="text-sm text-slate-600 mb-6 leading-relaxed">Desain elegan dan kekinian untuk momen spesial pernikahan atau acara.</p>
+                    </div>
+                    <a href="https://wa.me/6285201214267?text=Halo%20ArshaNet%20Printing,%20saya%20ingin%20pesan%20Undangan." target="_blank" class="block w-full text-center bg-whatsapp hover:bg-emerald-600 text-white font-bold py-2.5 rounded-xl text-sm transition shadow-sm">
+                        Pesan Sekarang
+                    </a>
+                </div>
+
+                <!-- Item 11 -->
+                <div class="bg-white p-6 rounded-3xl border border-slate-200/80 shadow-sm hover:shadow-md transition flex flex-col justify-between">
+                    <div>
+                        <h3 class="text-lg font-bold text-slate-900 mb-2">Kalender Custom</h3>
+                        <p class="text-sm text-slate-600 mb-6 leading-relaxed">Kalender dinding atau meja untuk promosi perusahaan atau pribadi.</p>
+                    </div>
+                    <a href="https://wa.me/6285201214267?text=Halo%20ArshaNet%20Printing,%20saya%20ingin%20pesan%20Kalender." target="_blank" class="block w-full text-center bg-whatsapp hover:bg-emerald-600 text-white font-bold py-2.5 rounded-xl text-sm transition shadow-sm">
+                        Pesan Sekarang
+                    </a>
+                </div>
+
+                <!-- Item 12 -->
+                <div class="bg-white p-6 rounded-3xl border border-slate-200/80 shadow-sm hover:shadow-md transition flex flex-col justify-between">
+                    <div>
+                        <h3 class="text-lg font-bold text-slate-900 mb-2">✨ Cetakan Lain-Lain</h3>
+                        <p class="text-sm text-slate-600 mb-6 leading-relaxed">Sertifikat, Amplop, Kop Surat, dan kebutuhan cetak lainnya sesuai request.</p>
+                    </div>
+                    <a href="https://wa.me/6285201214267?text=Halo%20ArshaNet%20Printing,%20saya%20ingin%20konsultasi%20cetakan%20lainnya." target="_blank" class="block w-full text-center bg-whatsapp hover:bg-emerald-600 text-white font-bold py-2.5 rounded-xl text-sm transition shadow-sm">
+                        Konsultasi
+                    </a>
+                </div>
+            </div>
         </div>
+    </section>
 
-        <!-- Tombol "Load More" -->
-        <div class="load-more-container" id="loadMoreContainer">
-            <button class="btn-load-more" id="loadMoreBtn">Muat Lebih Banyak Foto</button>
-        </div>
-    </div>
-
-<!-- Footer -->
-    <footer id="kontak" class="footer-section">
-        <div class="footer-container">
-            <!-- Kolom 1: Info & Alamat -->
-            <div class="footer-col">
-                <h3>ArshaNet Printing</h3>
-                <p>Solusi cetak kilat, berkualitas, dan terpercaya untuk segala kebutuhan bisnis serta acara Anda.</p>
-                <p class="footer-address">
-                    📍 <strong>Workshop:</strong> Desa Karangjambu RT 03 RW 03 - Balapulang (Buka Setiap Hari)
-                </p>
+    <!-- KENAPA PILIH ARSHANET PRINTING -->
+    <section id="keunggulan" class="py-16 bg-white border-t border-slate-100">
+        <div class="max-w-6xl mx-auto px-4">
+            <h2 class="text-2xl md:text-3xl font-black text-slate-900 mb-10 text-center md:text-left flex items-center justify-center md:justify-start gap-2">
+                <span>⚡</span> Kenapa Pilih Arshanet Printing?
+            </h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-slate-50 p-6 rounded-3xl border border-slate-100 shadow-sm text-center md:text-left">
+                    <div class="text-3xl mb-4">⏱️</div>
+                    <h3 class="text-lg font-bold text-slate-900 mb-2">Proses Kilat</h3>
+                    <p class="text-sm text-slate-600">Pengerjaan tepat waktu dengan mesin cetak berkualitas tinggi.</p>
+                </div>
+                <div class="bg-slate-50 p-6 rounded-3xl border border-slate-100 shadow-sm text-center md:text-left">
+                    <div class="text-3xl mb-4">🎨</div>
+                    <h3 class="text-lg font-bold text-slate-900 mb-2">Desain Kustom</h3>
+                    <p class="text-sm text-slate-600">Bisa menyesuaikan dengan identitas, logo, dan keinginan brand toko Anda.</p>
+                </div>
+                <div class="bg-slate-50 p-6 rounded-3xl border border-slate-100 shadow-sm text-center md:text-left">
+                    <div class="text-3xl mb-4">💬</div>
+                    <h3 class="text-lg font-bold text-slate-900 mb-2">Pesan Mudah</h3>
+                    <p class="text-sm text-slate-600">Konsultasi dan pemesanan langsung cepat via WhatsApp tanpa ribet.</p>
+                </div>
             </div>
+        </div>
+    </section>
 
-            <!-- Kolom 2: Pintasan Menu (Quick Links) -->
-            <div class="footer-col">
-                <h4>Pintasan</h4>
-                <ul class="footer-links">
-                    <li><a href="#">Beranda</a></li>
-                    <li><a href="#produk">Produk Andalan</a></li>
-                    <li><a href="#lainnya">Produk Lainnya</a></li>
-                    <li><a href="#fitur">Keunggulan</a></li>
+    <!-- FOOTER -->
+    <footer id="kontak" class="bg-slate-900 text-slate-300 pt-16 pb-12">
+        <div class="max-w-6xl mx-auto px-4 grid grid-cols-1 md:grid-cols-4 gap-8 mb-12">
+            <div class="md:col-span-2 space-y-4">
+                <h4 class="text-white text-xl font-bold">ArshaNet Printing</h4>
+                <p class="text-sm leading-relaxed text-slate-400">Solusi cetak kilat, berkualitas, dan terpercaya untuk segala kebutuhan bisnis serta acara Anda.</p>
+                <p class="text-sm text-slate-300">📍 <strong>Workshop:</strong> Desa Karangjambu RT 03 RW 03 - Balapulang (Buka Setiap Hari)</p>
+            </div>
+            <div>
+                <h4 class="text-white text-base font-bold mb-4">Hubungi Kami</h4>
+                <p class="text-sm mb-3">WhatsApp: <strong class="text-white">085201214267</strong></p>
+                <a href="https://wa.me/6285201214267?text=Halo%20ArshaNet%20Printing,%20saya%20ingin%20bertanya%20mengenai%20layanan%20cetak." target="_blank" rel="noopener noreferrer" class="inline-block bg-whatsapp text-white px-4 py-2 rounded-xl text-xs font-bold hover:bg-emerald-600 transition">
+                    Chat WhatsApp
+                </a>
+            </div>
+            <div>
+                <h4 class="text-white text-base font-bold mb-4">Pintasan</h4>
+                <ul class="space-y-2 text-sm text-slate-400">
+                    <li><a href="#beranda" class="hover:text-white transition">Beranda</a></li>
+                    <li><a href="#produk-andalan" class="hover:text-white transition">Produk Andalan</a></li>
+                    <li><a href="#produk-lainnya" class="hover:text-white transition">Produk Lainnya</a></li>
+                    <li><a href="#keunggulan" class="hover:text-white transition">Keunggulan</a></li>
                 </ul>
             </div>
-
-            <!-- Kolom 3: Kontak Cepat -->
-            <div class="footer-col">
-                <h4>Hubungi Kami</h4>
-                <p>WhatsApp: <strong>085201214267</strong></p>
-                <a href="https://wa.me/6285201214267?text=Halo%20ArshaNet%20Printing,%20saya%20ingin%20bertanya%20mengenai%20layanan%20cetak." class="footer-wa-btn" target="_blank">Chat WhatsApp</a>
-            </div>
         </div>
-
-        <div class="footer-bottom">
-            <p>&copy; <span id="year"></span> ArshaNet Printing. All rights reserved.</p>
+        <div class="max-w-6xl mx-auto px-4 pt-8 border-t border-slate-800 text-center text-xs text-slate-500">
+            <p>&copy; 2026 ArshaNet Printing. All rights reserved.</p>
         </div>
     </footer>
 
-    <!-- Menghubungkan file JavaScript -->
-    <script src="js/script.js"></script>
-    <!-- Tombol WhatsApp Melayang -->
-    <a href="https://wa.me/6285201214267?text=Halo%20ArshaNet%20Printing,%20saya%20ingin%20bertanya%20mengenai%20layanan%20cetak." class="floating-wa" target="_blank">
-        <!-- Icon WhatsApp Sederhana (SVG) -->
-        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
-        <span>Chat WhatsApp</span>
+    <!-- Tombol Mengambang WhatsApp -->
+    <a href="https://wa.me/6285201214267?text=Halo%20ArshaNet%20Printing,%20saya%20ingin%20bertanya%20mengenai%20layanan%20cetak." target="_blank" rel="noopener noreferrer" class="fixed bottom-6 right-6 z-50 bg-whatsapp hover:bg-emerald-600 text-white p-4 rounded-full shadow-2xl transition transform hover:scale-110 flex items-center justify-center">
+        <svg class="w-6 h-6 fill-current" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.198-.198.347-.764.967-.937 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.124-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
     </a>
-    <!-- Kotak Lightbox (Pastikan ini ada di index.html) -->
-    <div id="lightboxModal" class="lightbox" onclick="closeLightbox()">
-        <span class="lightbox-close">&times;</span>
-        <img class="lightbox-content" id="lightboxImg">
-        <div class="lightbox-caption" id="lightboxCaption"></div>
-    </div>
 
 </body>
 </html>
